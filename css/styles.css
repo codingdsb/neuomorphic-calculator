@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main: #dddbdb;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+body {
+  background-color: var(--main);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 30%;
+  height: 80%;
+}
+
+#screen {
+  height: 12%;
+  width: 100%;
+  background-color: var(--main);
+  border-radius: 12px;
+  box-shadow: inset -3px -3px 5px #ffffff70, inset 3px 3px 15px #00000070;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 40px;
+  overflow-y: auto;
+}
+
+.frame {
+  height: 88%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.button {
+  height: 60%;
+  width: 95%;
+  border-radius: 12px;
+  background-color: var(--main);
+  box-shadow: -3px -3px 5px #ffffff20, 3px 3px 15px #00000050;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.button:active {
+  box-shadow: inset -3px -3px 5px #ffffff70, inset 3px 3px 15px #00000070;
+}
+
+.button::selection {
+  color: none;
+  background: none;
+}
+
+.button::-moz-selection {
+  color: none;
+  background: none;
+}
